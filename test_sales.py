@@ -19,25 +19,28 @@ var_val = 862193617.9623628
 class TestingSum(unittest.TestCase):
 
     def test_sum(self):
-        self.assertEqual(numpy.sum(df2['gross_sales']), sum_val, )
+        self.assertEqual(numpy.sum(df2['gross_sales']), sum_val, 'Value is Match' )
 
     def test_mean(self):
-        self.assertEqual(numpy.mean(df2['gross_sales']), mean_val, )
+        self.assertEqual(numpy.mean(df2['gross_sales']), mean_val, 'Value is Match' )
 
     def test_min(self):
-        self.assertEqual(numpy.min(df2['gross_sales']), min_val, )
+        self.assertEqual(numpy.min(df2['gross_sales']), min_val, 'Value is Match' )
 
     def test_max(self):
-        self.assertEqual(numpy.max(df2['gross_sales']), max_val, )
+        self.assertEqual(numpy.max(df2['gross_sales']), max_val, 'Value is Match')
 
     def test_median(self):
-        self.assertEqual(numpy.median(df2['gross_sales']), median_val, )
+        self.assertEqual(numpy.median(df2['gross_sales']), median_val, 'Value is Match')
 
     def test_std(self):
-        self.assertEqual(numpy.std(df2['gross_sales']), std_val, )
+        self.assertEqual(numpy.std(df2['gross_sales']), std_val, 'Value is Match')
 
     def test_var(self):
-        self.assertEqual(numpy.var(df2['gross_sales']), var_val, )
+        self.assertEqual(numpy.var(df2['gross_sales']), var_val, 'Value is Match')
+
+    def test_mint(self):
+        self.assertTrue(numpy.min(df2['gross_sales']), min_val, 'Value is Match')
 
 
 if __name__ == '__main__':
