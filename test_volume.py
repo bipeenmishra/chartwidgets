@@ -17,25 +17,28 @@ var_val = 45632366.49789355
 class TestingSum(unittest.TestCase):
 
     def test_sum(self):
-        self.assertEqual(sum(df2['volume_in_kg']), sum_val, )
+        self.assertEqual(sum(df2['volume_in_kg']), sum_val, 'Value is Match')
 
     def test_mean(self):
-        self.assertEqual(numpy.mean(df2['volume_in_kg']),mean_val, )
+        self.assertEqual(numpy.mean(df2['volume_in_kg']), mean_val, 'Value is Match')
 
     def test_max(self):
-        self.assertEqual(numpy.max(df2['volume_in_kg']), max_val, )
+        self.assertEqual(numpy.max(df2['volume_in_kg']), max_val, 'Value is Match')
 
     def test_min(self):
-        self.assertEqual(numpy.min(df2['volume_in_kg']), min_val,)
+        self.assertEqual(numpy.min(df2['volume_in_kg']), min_val, 'Value is Match')
 
     def test_median(self):
-        self.assertEqual(numpy.median(df2['volume_in_kg']), median_val,)
+        self.assertEqual(numpy.median(df2['volume_in_kg']), median_val, 'Value is Match')
 
     def test_std(self):
-        self.assertEqual(numpy.std(df2['volume_in_kg']), std_val,)
+        self.assertEqual(numpy.std(df2['volume_in_kg']), std_val, 'Value is Match')
 
     def test_var(self):
-        self.assertEqual(numpy.var(df2['volume_in_kg']), var_val,)
+        self.assertEqual(numpy.var(df2['volume_in_kg']), var_val, 'Value is Match')
+
+    def test_mint(self):
+        self.assertTrue(numpy.min(df2['volume_in_kg']), min_val, 'Value is Match')
 
 
 if __name__ == '__main__':
