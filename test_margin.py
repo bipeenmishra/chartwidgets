@@ -3,6 +3,13 @@ from statistics import mean
 import numpy
 import pandas as pd
 df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv', engine='python')
+su = df2['gm'].sum()
+me = df2['gm'].mean()
+mi = df2['gm'].min()
+mx = df2['gm'].max()
+med = df2['gm'].median()
+st = df2['gm'].std()
+va = df2['gm'].var()
 sum_val = 1457317609.7210157
 mean_val = 4475.255143643776
 max_val = 3073251.674
@@ -15,29 +22,48 @@ var_val = 586680528.3043605
 
 
 class TestingSum(unittest.TestCase):
+
     def test_sum(self):
-        self.assertEqual(numpy.sum(df2['gm']), sum_val, 'Value is Match')
+        if su == sum_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_mean(self):
-        self.assertEqual(numpy.mean(df2['gm']), mean_val, 'Value is Match' )
+        if me == min_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_min(self):
-        self.assertEqual(numpy.min(df2['gm']), min_val, 'Value is Match' )
+        if mi == min_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_max(self):
-        self.assertEqual(numpy.max(df2['gm']), max_val, 'Value is Match')
+        if mx == max_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_median(self):
-        self.assertEqual(numpy.median(df2['gm']), median_val, 'Value is Match' )
-
-    def test_var(self):
-        self.assertEqual(numpy.var(df2['gm']), var_val, 'Value is Match' )
+        if med == median_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_std(self):
-        self.assertEqual(numpy.std(df2['gm']), std_val, 'Value is Match' )
+        if st == std_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
-    def test_mint(self):
-        self.assertTrue(numpy.min(df2['gm']), min_val, 'Value is Match')
+    def test_var(self):
+        if va == var_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
 
 if __name__ == '__main__':

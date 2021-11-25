@@ -12,31 +12,31 @@ var_val = 586680528.3043605
 
 class TestingSum(unittest.TestCase):
     def test_negativeForLess(self):
-        first = min_val
-        second = 0
+        x = min_val
+        y = 0
 
-        if first < second:
-            return "error: value is less than second value"
+        if x < y:
+            return "error: Min value cannot be zero"
         else:
-            return "correct: value is greater than second value"
+            return "correct: Min value is positive "
 
     def test_positiveForGreater(self):
-        first = sum_val
-        second = 10000000
+        x = sum_val
+        y = 10000000
 
-        if first > second:
-            return "error: value is Greater than second value "
+        if x > y:
+            return "error: Sum of volume cannot be too high "
         else:
-            return "correct: value is less than second value"
+            return "correct: Sum of volume in range"
 
     def test_positiveForGre(self):
-        first = var_val
-        second = 10000000
+        x = var_val
+        y = 10000000
 
-        if first > second:
-            return "error: value is Greater than second value "
+        if x > y:
+            return "error: Var of volume cannot be too high "
         else:
-            return "correct: value is less than second value"
+            return "correct: Var of volume in range"
 
 
 if __name__ == '__main__':

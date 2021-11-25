@@ -3,6 +3,13 @@ from statistics import mean
 import numpy
 import pandas as pd
 df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv', engine='python')
+su = df2['volume_in_kg'].sum()
+me = df2['volume_in_kg'].mean()
+mi = df2['volume_in_kg'].min()
+mx = df2['volume_in_kg'].max()
+med = df2['volume_in_kg'].median()
+st = df2['volume_in_kg'].std()
+va = df2['volume_in_kg'].var()
 sum_val = 256677722.91003045
 mean_val = 788.2278317708805
 max_val = 439245.0136
@@ -17,28 +24,46 @@ var_val = 45632366.49789355
 class TestingSum(unittest.TestCase):
 
     def test_sum(self):
-        self.assertEqual(sum(df2['volume_in_kg']), sum_val, 'Value is Match')
+        if su == sum_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_mean(self):
-        self.assertEqual(numpy.mean(df2['volume_in_kg']), mean_val, 'Value is Match')
-
-    def test_max(self):
-        self.assertEqual(numpy.max(df2['volume_in_kg']), max_val, 'Value is Match')
+        if me == min_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_min(self):
-        self.assertEqual(numpy.min(df2['volume_in_kg']), min_val, 'Value is Match')
+        if mi == min_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
+
+    def test_max(self):
+        if mx == max_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_median(self):
-        self.assertEqual(numpy.median(df2['volume_in_kg']), median_val, 'Value is Match')
+        if med == median_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_std(self):
-        self.assertEqual(numpy.std(df2['volume_in_kg']), std_val, 'Value is Match')
+        if st == std_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
     def test_var(self):
-        self.assertEqual(numpy.var(df2['volume_in_kg']), var_val, 'Value is Match')
-
-    def test_mint(self):
-        self.assertTrue(numpy.min(df2['volume_in_kg']), min_val, 'Value is Match')
+        if va == var_val:
+            return "Value is match"
+        else:
+            return "Error: Value is not match"
 
 
 if __name__ == '__main__':
