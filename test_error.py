@@ -3,9 +3,9 @@ from statistics import mean
 import numpy
 import pandas as pd
 df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv', engine='python')
-sum_val = 1457317609.7210157
-min_val = -4069043.765
-var_val = 586680528.3043605
+sum_val = df2['volume_in_kg'].sum()
+min_val = df2['volume_in_kg'].min()
+var_val = df2['volume_in_kg'].var()
 
 # Testing for margin data
 
@@ -16,27 +16,27 @@ class TestingSum(unittest.TestCase):
         y = 0
 
         if x < y:
-            return "error: Min value cannot be zero"
+            raise Exception("error: Min value cannot be in minus")
         else:
-            return "correct: Min value is positive "
+            raise Exception("correct: Min value is positive ")
 
     def test_positiveForGreater(self):
         x = sum_val
         y = 10000000
 
         if x > y:
-            return "error: Sum of volume cannot be too high "
+            raise Exception("error: Sum of volume cannot be too high ")
         else:
-            return "correct: Sum of volume in range"
+            raise Exception("correct: Sum of volume in range")
 
     def test_positiveForGre(self):
         x = var_val
         y = 10000000
 
         if x > y:
-            return "error: Var of volume cannot be too high "
+            raise Exception("error: Var of volume cannot be too high ")
         else:
-            return "correct: Var of volume in range"
+            raise Exception("correct: Var of volume in range")
 
 
 if __name__ == '__main__':
