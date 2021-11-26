@@ -16,9 +16,9 @@ class TestingSum(unittest.TestCase):
         y = 0
 
         if x < y:
-            raise Exception("error: Min value cannot be in minus")
+            raise Exception("Error: Min value is less than zero ")
         else:
-            raise Exception("correct: Min value is positive ")
+            return "correct: Min value is positive "
 
     def test_positiveForGreater(self):
         x = sum_val
@@ -27,7 +27,7 @@ class TestingSum(unittest.TestCase):
         if x > y:
             raise Exception("error: Sum of volume cannot be too high ")
         else:
-            raise Exception("correct: Sum of volume in range")
+            return "correct: Sum of volume in range"
 
     def test_positiveForGre(self):
         x = var_val
@@ -36,7 +36,7 @@ class TestingSum(unittest.TestCase):
         if x > y:
             raise Exception("error: Var of volume cannot be too high ")
         else:
-            raise Exception("correct: Var of volume in range")
+            return "correct: Var of volume in range"
 
 
 if __name__ == '__main__':
