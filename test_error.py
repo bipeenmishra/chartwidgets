@@ -16,7 +16,7 @@ class TestingSum(unittest.TestCase):
         y = 0
 
         if x < y:
-            raise Exception("Error: Min value is less than zero " , + min_val)
+            raise Exception("Error: Min value is less than zero ")
         else:
             return "correct: Min value is positive "
 
@@ -25,7 +25,7 @@ class TestingSum(unittest.TestCase):
         y = 10000000
 
         if x > y:
-            raise Exception("error: Sum of volume cannot be too high " , + sum_val)
+            raise Exception("error: Sum of volume cannot be too high ")
         else:
             return "correct: Sum of volume in range"
 
@@ -34,7 +34,7 @@ class TestingSum(unittest.TestCase):
         y = 10000000
 
         if x > y:
-            raise Exception("error: Var of volume cannot be too high " , + var_val)
+            raise Exception("error: Var of volume cannot be too high ")
         else:
             return "correct: Var of volume in range"
 
