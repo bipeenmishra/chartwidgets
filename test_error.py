@@ -2,7 +2,7 @@ import unittest
 from statistics import mean
 import numpy
 import pandas as pd
-df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv', engine='python')
+df2 = pd.read_csv('C:\\Users\\mishr\\PycharmProjects\\pytest\\demo_data_churn.csv', engine='python')
 sum_val = df2['volume_in_kg'].sum()
 min_val = df2['volume_in_kg'].min()
 var_val = df2['volume_in_kg'].var()
