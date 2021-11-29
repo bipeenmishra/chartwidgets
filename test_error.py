@@ -2,7 +2,8 @@ import unittest
 from statistics import mean
 import numpy
 import pandas as pd
-df2 = pd.read_csv('C:\\Users\\mishr\\PycharmProjects\\pytest\\demo_data_churn.csv')
+csv = 'demo_data_churn.csv'
+df2 = pd.read_csv(csv)
 sum_val = df2['volume_in_kg'].sum()
 min_val = df2['volume_in_kg'].min()
 var_val = df2['volume_in_kg'].var()
@@ -16,7 +17,7 @@ class TestingSum(unittest.TestCase):
         y = 0
 
         if x < y:
-            raise Exception("Error: Min value is less than zero ")
+            raise Exception("Error: Min value is less than zero ", min_val)
         else:
             return "correct: Min value is positive "
 
@@ -25,7 +26,7 @@ class TestingSum(unittest.TestCase):
         y = 10000000
 
         if x > y:
-            raise Exception("error: Sum of volume cannot be too high ")
+            raise Exception("error: Sum of volume cannot be too high ", sum_val)
         else:
             return "correct: Sum of volume in range"
 
@@ -34,7 +35,7 @@ class TestingSum(unittest.TestCase):
         y = 10000000
 
         if x > y:
-            raise Exception("error: Var of volume cannot be too high ")
+            raise Exception("error: Var of volume cannot be too high ", var_val)
         else:
             return "correct: Var of volume in range"
 

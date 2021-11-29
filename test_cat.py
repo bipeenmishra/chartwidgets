@@ -2,9 +2,9 @@ import pandas as pd
 import unittest
 import numpy as np
 import csv
-
+csv = 'demo_data_churn.csv'
 # Creating the dataframe
-df = pd.read_csv('C:\\Users\\mishr\\PycharmProjects\\pytest\\demo_data_churn.csv')
+df = pd.read_csv(csv)
 gkk = df.groupby(['region', 'volume_in_kg']).first()
 
 sum_val = df.groupby('region')['volume_in_kg'].sum()
