@@ -2,7 +2,7 @@ trigger:
 - automate-testing
 
 pool:
-vmImage: ubuntu-latest
+  vmImage: ubuntu-latest
 strategy:
   matrix:
     Python27:
