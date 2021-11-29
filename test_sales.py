@@ -3,7 +3,7 @@ from statistics import mean
 import numpy
 import pandas as pd
 
-df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv', engine='python')
+df2 = pd.read_csv('C:\\Users\\mishr\\Downloads\\demo_data_churn.csv')
 su = df2['gross_sales'].sum()
 me = df2['gross_sales'].mean()
 mi = df2['gross_sales'].min()

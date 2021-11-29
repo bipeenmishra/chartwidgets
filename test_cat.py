@@ -4,7 +4,7 @@ import numpy as np
 import csv
 
 # Creating the dataframe
-df = pd.read_csv('C:\\Users\\mishr\\PycharmProjects\\pytest\\demo_data_churn.csv', engine='python')
+df = pd.read_csv('C:\\Users\\mishr\\PycharmProjects\\pytest\\demo_data_churn.csv')
 gkk = df.groupby(['region', 'volume_in_kg']).first()
 
 sum_val = df.groupby('region')['volume_in_kg'].sum()
@@ -39,4 +39,3 @@ class TestingSum(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
